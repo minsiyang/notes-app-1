@@ -31,8 +31,9 @@ StoresInstancesOfNoteWhenAddingNewNote();
 
 function IdIncreaseWhenAddaNote() {
   let notelist = new NoteList();
-      expect.isTrue(notelist.id === 0);
+      notelist.addNote("note");
+      expect.isTrue(notelist.returnNote()[0].id === 0);
       notelist.addNote("anotherNote");
-      expect.isTrue(notelist.id === 1);
+      expect.isTrue(notelist.returnNote()[1].id === 1);
 }
 IdIncreaseWhenAddaNote();

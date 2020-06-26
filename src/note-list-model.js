@@ -1,12 +1,12 @@
 (function (exports) {
   function NoteList() {
     this.notes = [];
-    this.id = 0;
+    this.counter = 0;
   }
 
-  NoteList.prototype.addNote = function (note, id=this.id) {
-    this.notes.push(new Note(note, id));
-    this.id ++
+  NoteList.prototype.addNote = function (note, counter=this.counter) {
+    this.notes.push(new Note(note, counter));
+    this.counter ++
   };
 
   NoteList.prototype.returnNote = function () {
