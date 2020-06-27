@@ -16,6 +16,7 @@
     exports.NoteController = NoteController;
 })(this);
 
+
     window.addEventListener('DOMContentLoaded', function(event){
         var list = new NoteList();
         var controller = new NoteController(list);
